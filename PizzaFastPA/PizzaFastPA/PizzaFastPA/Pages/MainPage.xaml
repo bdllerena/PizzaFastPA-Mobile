@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaFastPA.Pages.MainPage"
+             xmlns:local="clr-namespace:PizzaFastPA.Models"
+             Title="Inicio">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Button Image="delevery.jpg" TextColor="White" FontAttributes="Bold" BackgroundColor="#ee9ba5" Text="Pizza Fast"/>
+                <Grid>
+                    <local:PersonaBoton FontSize="14" FontAttributes="Bold" TextColor="White" BackgroundColor="#ea545f" Grid.Row="0"  Grid.Column="0" Image="salesman.png" Text="Registrarse" Clicked="Boton_VerClientes" />
+                    <local:PersonaBoton FontSize="14" FontAttributes="Bold" TextColor="White" BackgroundColor="#ee9ba5" Grid.Row="0"  Grid.Column="1" Image="customer.png"       Text="Pedidos" Clicked="Boton_VerPedidos"/>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

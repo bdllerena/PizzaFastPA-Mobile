@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaFastPA.Pages.Cliente"
+             Title="{Binding Nombre}">
+    <ScrollView Orientation="Both">
+        <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+
+            <Entry Placeholder="Ingrese su nombre" x:Name="Nombre" Text="{Binding Nombre}" />
+
+            <Entry Placeholder="Ingrese su apellido" x:Name="Apellido" Text="{Binding Apellido}" />
+
+            <Entry Placeholder="Ingrese su cedula" x:Name="Cedula" Text="{Binding Cedula}" />
+            <Entry Placeholder="Ingrese su fecha nacimiento" x:Name="FechaNac" Text="{Binding FechaNac}"/>
+
+            <Button StyleClass="Info"  Image="list.png" Text="Guardar" Clicked="OnSaveClicked" />
+            <Button StyleClass="Info"  Image="listx.png" Text="Borrar" Clicked="OnDeleteClicked" />
+            <!--<Button Text="Add" Clicked="AddButton_Clicked" />-->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

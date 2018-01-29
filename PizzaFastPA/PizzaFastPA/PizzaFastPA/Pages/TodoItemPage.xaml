@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PizzaFastPA.Pages.TodoItemPage"
+             Title="Escriba su pedido">
+    <!-- Title="{Binding Nombre}">-->
+    <ScrollView Orientation="Both">
+        <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+
+            <!-- <Entry Placeholder="Ingrese su nombre" x:Name="Nombre" Text="{Binding Nombre}" />
+
+            <Entry Placeholder="Ingrese su apellido" x:Name="Apellido" Text="{Binding Apellido}" />
+
+            <Entry Placeholder="Ingrese su cedula" x:Name="Cedula" Text="{Binding Cedula}" />
+            <Entry Placeholder="Ingrese su fecha nacimiento" x:Name="FechaNac" Text="{Binding FechaNac}" />-->
+            <Picker Title="Seleccione su usuario" x:Name="picker">
+                <Picker.ItemDisplayBinding>
+                    <Binding Path="Cedula"/>
+                </Picker.ItemDisplayBinding>
+            </Picker>
+            <Label x:Name="CedulaInvi"  />
+            <Picker Title="Seleccione que tipo de pizza quiere..."  x:Name="poison"/>
+
+            <Entry x:Name="Ingrediente1" Placeholder="Ingrese su primer ingrediente" IsEnabled="False" IsVisible="False"  />
+            <Entry x:Name="Ingrediente2" Placeholder="Ingrese su segundo ingrediente" IsEnabled="False" IsVisible="False"  />
+            <Entry x:Name="Ingrediente3" Placeholder="Ingrese su tercer ingrediente" IsEnabled="False" IsVisible="False"  />
+            <Entry x:Name="Cantidad1" Placeholder="Ingrese la cantidad de pizzas a comprar" IsEnabled="False" IsVisible="False" Text="{Binding Cantidad1}" />
+
+            <!--
+            <Label  Text="Nombre" />
+            <Label  Text="Apellido" />
+            <Label  Text="Cedula" />
+            <Label  Text="FechaNac" />
+            <Label  Text="Pizza1" />
+            <Label  Text="Cantidad1" />
+            <Label  Text="Pizza2" />
+            <Label  Text="Cantidad2" />
+            <Label  Text="Pizza3" />
+            <Label  Text="Cantidad3" />-->
+            <!--<Label  Text="Título" />
+            <Entry x:Name="Titulo" Text="{Binding Nombre}" />
+            <Label Text="Test" />
+            <Entry x:Name="Test" Text="{Binding Test}" />
+            <Label Text="Notas" />
+            <Editor Text="{Binding Notes}"/>-->
+            <!-- <Label Text="Notificar nota"/>-->
+            <!-- <Picker Title="Recuerdalo en.."  x:Name="poison"/>-->
+            <!-- <Label Text="Terminada?" />
+            <Switch HorizontalOptions="Start" x:Name="dones" IsToggled="{Binding Done}" />-->
+            <!--<Button StyleClass="Info"  Image="list.png" Text="Guardar" Clicked="OnSaveClicked" />
+            <Button StyleClass="Info"  Image="listx.png" Text="Borrar" Clicked="OnDeleteClicked" />-->
+            <Button Text="Enviar Pedido" Clicked="AddButton_Clicked" />
+            <!--<Button StyleClass="Info"  Image="stop.png" Text="Cancelar Recordatorio" Clicked="OnCancelClicked" />
+            <Button StyleClass="Info"  Image="speech.png" Text="Escuchar Nota" Clicked="OnSpeakClicked" />-->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
